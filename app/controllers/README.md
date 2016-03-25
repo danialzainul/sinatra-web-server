@@ -1,8 +1,7 @@
 app/controllers/*.rb
 =================
-This is your routing and logic folder. It starts with routing address and end with either
-providing a view or redirection. This framework provides full flexibility and room for
-customization.
+This is your routing and logic folder. It starts with routing address and end with either providing a view or redirection. 
+This framework provides full flexibility and room for customization.
 
 you can create a controller ruby file, in this example, let's create 'users' routing:
 ```

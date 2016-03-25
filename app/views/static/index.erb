@@ -1,2 +1,54 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<div id="container">
+
+<div id="header">
+	<h1>short.it</h1>
+</div>
+
+<div id="input">
+<!-- To create the input form -->
+	<form action="/urls" method="post">
+		<input type="text" name="original_url" placeholder="Enter URL">
+		<input type="submit" value="Submit">
+	</form>
+
+</div>
+
+<div id="content">
+
+		<h3>List of your history</h3>
+<!-- To create a table -->
+		<table>
+			<tr>
+				<th>Original URL</th>
+				<th>Short.it</th>
+				<th>Clicks</th>
+			</tr>
+			<% Url.all.each do |url| %>
+				<tr>
+			    	<td> <%= "#{url.long}" %> </td>
+			    	<td> <a href = <%= "#{url.short}" %>> <%= url.short %> </a> </td>
+			    	<td> <%= "#{url.click_count}" %> </td>
+			    </tr>
+			<% end %>
+		</table>
+
+</div>
+
+</div>
+
+<div id="footer">
+	Copyright &copy; 2016 Danial Z
+</div>
+
+<!-- animation -->
+
+
+<!-- To create a list
+<%Url.all.each do |url| %>
+	<p> Original URL, <%= url.long %>  and short URL, <%= url.short %> </p>
+	<p> Click count: <%= url.click_count %> </p>
+	<p> Your new link => <a href = <%= "#{url.short}" %>> <%= url.short %> </a> </p>
+<% end %> 
+-->
+
+<!-- To key in link, use <a href="http://website">Click link here etc </a> -->

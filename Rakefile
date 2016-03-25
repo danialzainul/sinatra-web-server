@@ -15,7 +15,7 @@ namespace :generate do
 		end
 
 		name			= ENV['NAME'].camelize
-		filename	= "%s_spec.rb" % ENV['NAME'].underscore
+		filename		= "%s_spec.rb" % ENV['NAME'].underscore
 		path			= APP_ROOT.join('spec', filename)
 
 		if File.exist?(path)
