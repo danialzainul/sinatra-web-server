@@ -23,7 +23,7 @@
 				<th>Short.it</th>
 				<th>Clicks</th>
 			</tr>
-			<% Url.all.each do |url| %>
+			<% Url.limit(10).each do |url| %>
 				<tr>
 			    	<td> <%= "#{url.long}" %> </td>
 			    	<td> <a href = <%= "#{url.short}" %>> <%= url.short %> </a> </td>
